@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Revalia&family=Roboto:wght@400;500&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+:root {
+  --dark-blue-color: #34547A;
+  --dark-color: #000000;
+  --grey-color: #727272;
+  --white-color: #FFFFFF;
+  --bacground-color: #F9F9F9;
+  --bacground-gray-color: #EEEFF1;
+}
+
+.text-h1 {
+  font-weight: 500;
+  font-size: 48px;
+  color: var(--dark-color);
+}
+
+.text-h2 {
+  font-weight: 500;
+  font-size: 32px;
+  color: var(--dark-color);
+}
+
+.text-p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--grey-color);
+}
+
+.header {
+  min-height: 700px;
+  background-color: var(--bacground-gray-color);
+  padding-top: 60px;
+  padding-bottom: 150px;
+}
+
+.header__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 130px;
+}
+
+.header__title-logo {
+  font-family: 'Revalia';
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 60px;
+  color: var(--dark-blue-color);
+}
+
+.header__title-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 42px;
+}
+
+.header__nav-p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.1em;
+  color: var(--dark-color);
+}
+
+.header__title-nav a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__img {
+  margin-right: 130px;
+  margin-left: 80px;
+  width: 357px;
+  height: 234px;
+}
+
+
+.header__h1 {
+  margin-bottom: 60px;
+}
+
+.header__p {
+  margin-bottom: 60px;
+}
+
+.header__btn {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--white-color);
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.1em;
+  padding-top: 20px;
+  text-align: center;
+  width: 225px;
+  height: 65px;
+  background-color: var(--dark-blue-color);
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-me__content {
+  padding-top: 120px;
+}
+
+.about-me__h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-me__p {
+  max-width: 540px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.about-me__projects {
+  background-color: var(--dark-blue-color);
+  padding: 100px 0;
+}
+
+.about-me__projects-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.about-me__project {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.nubm-projects {
+  color: var(--white-color);
+  margin-bottom: 5px;
+}
+
+.text-project {
+  color: var(--white-color);
+}
+
+.skills {
+  padding: 100px 0;
+}
+
+.skills__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skills__h2 {
+  margin-bottom: 50px;
+}
+
+.skills__label {
+  margin-bottom: 20px;
+}
+
+.skills__progress-bar {
+  display: flex;
+  width: 450px;
+  height: 4px;
+  background-color: #999;
+  margin-bottom: 30px;
+}
+.progress-bar-completed {
+  background-color: #34547A;
+}
+
+.video-job {
+  background-color: var(--bacground-gray-color);
+  padding: 100px 0;
+}
+
+.video-job__h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.video-job__p {
+  text-align: center;
+  max-width: 540px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+
+.project__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+
+.project__grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 480px;
+  max-height: 480px;
+}
+.project__img {
+  z-index: 1;
+  transition: 0.5s ease;
+}
+
+.project__eye {
+  position: absolute;
+  opacity: 0;
+  z-index: 3;
+  transition: 0.5s ease;
+}
+
+.project__img-filter {
+  position: absolute;
+  background-color: #34547A;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.project__grid-item:hover .project__img {
+  opacity: 1;
+}
+.project__grid-item:hover .project__img-filter {
+  opacity: 0.8;
+}
+
+.project__grid-item:hover .project__eye {
+  opacity: 1;
+}
+
+.materialboxed.active .project__img-filter{
+  opacity: 0;
+  z-index: 0;
+}
+
+.materialboxed.active .project__eye{
+  opacity: 0;
+  z-index: 0
+}
+
+.clients {
+  padding-top: 50px;
+  margin-bottom: 100px;
+}
+
+.clients__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-request {
+  background-color: var(--bacground-gray-color);
+  padding: 100px 0;
+}
+
+.form-request__h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+
+.form-request__p {
+  max-width: 540px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+.form-request__form {
+  max-width: 540px;
+  display: grid;
+  grid-template-areas: "a a b b" "c c c c" ". d d .";
+  justify-items: center;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.form-request__input-name {
+  width: 255px;
+  height: 50px;
+  background: var(--white-color);
+  border: none;
+  padding-left: 20px;
+  grid-area: a;
+}
+
+.form-request__input-email {
+  width: 255px;
+  height: 50px;
+  background: var(--white-color);
+  border: none;
+  padding-left: 20px;
+  grid-area: b;
+  }
+
+.form-request__text {
+  max-width: 540px;
+  width: 100%;
+  height: 175px;
+  background: var(--white-color);
+  border: none;
+  margin-bottom: 50px;
+  padding: 20px;
+  grid-area: c;
+}
+
+.form-request__btn {
+  display: block;
+  width: 190px;
+  height: 55px;
+  color: var(--white-color);
+  background: var(--dark-blue-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.15em;
+  margin: 0 auto;
+  grid-area: d;
+}
+
+
+.footer {
+  background-color: var(--dark-blue-color);
+  padding: 50px 0;
+}
+
+
+.footer__grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.footer__name {
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 25px;
+  color: var(--white-color);
+  margin-bottom: 20px;
+}
+
+.footer__disc {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 21px;
+  color: var(--white-color);
+}
+
+.footer__social {
+  display: flex;
+  justify-content: space-between;
+  gap: 22px;
+}
+
+@media screen and (max-width: 1280px){
+  .header {
+    padding-bottom: 100px;
+  }
+  .header__title {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 80px;
+  }
+
+  
+  .header__title-nav {
+    gap: 20px;
+  }
+
+  .header__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .header__img {
+    margin: 0 auto;
+    width: 357px;
+    height: 234px;
+    margin-bottom: 30px;
+  }
+
+  .header__h1 {
+    margin-bottom: 30px;
+  }
+  
+  .header__p {
+    margin-bottom: 30px;
+  }
+
+  .about-me__projects-items {
+    padding-right: 20px;
+    padding-left: 20px;
+    gap: 50px; 
+    flex-wrap: wrap;
+  }
+  
+  .skills__flex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .video-job__img {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .project__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .clients__flex {
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+}
+
+@media screen and (max-width: 768px){
+  .header__title-logo {
+    margin-bottom: 30px;
+  }
+  
+  .header__title {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .header__title-nav {
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .project__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .form-request__form {
+    display: grid;
+    grid-template-areas: "a" "b" "c" "d";
+  }
+
+  .footer {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+
+
+
